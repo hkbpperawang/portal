@@ -21,12 +21,12 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "HKBP Perawang"
 description              : "Portal Situs HKBP Perawang"
-url                      : "https://portal.hkbpperawang.org"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+url                      : portal.hkbpperawang.org
+baseurl                  : #"/portal"
+repository               : #"hkbpperawang/portal"
+teaser                   : "/assets/images/PortalHKBPPerawangjpg"
 logo                     : "/assets/images/fav.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Portal HKBP Perawang"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -186,7 +186,7 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
+encoding: "UTF-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
@@ -213,7 +213,7 @@ kramdown:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: expanded # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: expanded # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style / minify using :compressed
 
 
 # Outputting
@@ -238,7 +238,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
 
 # Archives
 #  Type
@@ -290,3 +289,5 @@ defaults:
       comments: # true
       share: true
       related: true
+
+github: [metadata]

@@ -2,7 +2,7 @@
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
   <head>
     {% include head.html %}
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -16,8 +16,8 @@
 <div class="body-overlay"></div>
   {% include leftpanel.html %}
 
-<div class="panel-close panel-close--left"><img src="../assets/images/icons/black/close.svg" alt="" title=""/></div>
-<div class="panel-close panel-close--right"><img src="../assets/images/icons/black/close.svg" alt="" title=""/></div>
+<div class="panel-close panel-close--left"><img src="{{ '/assets/images/icons/black/close.svg' | relative_url }}" alt="" title=""/></div>
+<div class="panel-close panel-close--right"><img src="{{ '/assets/images/icons/black/close.svg' | relative_url }}" alt="" title=""/></div>
 
 <div class="page page--main" data-page="intro-website">
   {% include header.html %}
