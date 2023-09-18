@@ -29,3 +29,6 @@ gem "minimal-mistakes-jekyll"
 # Cf. https://jekyllrb.com/docs/plugins/installation/
 group :jekyll_plugins do
 end
+
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "webrick", "~> 1.8"
