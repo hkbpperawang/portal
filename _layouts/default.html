@@ -2,10 +2,10 @@
 ---
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+<html lang="en">
   <head>
     {% include head.html %}
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
 
   <body class="">
@@ -156,6 +156,16 @@
       </div>
     {% endif %} -->
 
+<!-- Social Icons Popup -->
+<div id="popup-social">
+  {% include popup-social.html%}
+</div>
+ 
+<!-- Alert --> 
+<div id="popup-alert">
+  {% include popup-alert.html%}
+</div>  
+
     <div id="footer" class="page__footer">
       <footer>
         {% include footer/custom.html %}
@@ -164,7 +174,7 @@
     </div>
 
     {% include scripts.html %}
-    {% include scipt2.html %}
+    <!-- {% include scipt2.html %} -->
 
   </body>
 </html>
