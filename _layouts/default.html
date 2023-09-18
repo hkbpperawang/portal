@@ -2,15 +2,15 @@
 ---
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
   <head>
     {% include head.html %}
-    <!-- {% include head/custom.html %} -->
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include_cached skip-links.html %}
-    {% include_cached masthead.html %}
+  <body class="">
+    <!-- {% include_cached skip-links.html %} -->
+    <!-- {% include_cached masthead.html %} -->
 
 <!-- Overlay panel -->
 <div class="body-overlay"></div>
@@ -26,37 +26,7 @@
     <!-- PAGE CONTENT -->
   <div class="page__content page__content--with-header">
     <h2 class="page__title">Selamat Datang di Portal HKBP Perawang</h2> 
-          
-    <!-- SLIDER SIMPLE -->
-    <div class="swiper-container slider-simple slider-thumb-init mb-20" data-paginationtype="bullets" data-spacebetweenitems="0" data-itemsperview="1">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide slider-simple__slide" style="background-image:url(/assets/images/photos/image-1.jpg);">
-          <div class="slider-simple__caption caption">
-            <div class="caption__content">
-              <h2 class="caption__title">The desire to <strong>create</strong> is deep</h2>
-            </div>
-          </div>
-        </div> 
-        <div class="swiper-slide slider-simple__slide" style="background-image:url(/assets/images/photos/image-2.jpg);">
-          <div class="slider-simple__caption caption">
-            <div class="caption__content">
-              <h2 class="caption__title">Everything you can <strong>imagine</strong> is real</h2>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide slider-simple__slide" style="background-image:url(/assets/images/photos/image-3.jpg);">
-          <div class="slider-simple__caption caption">
-            <div class="caption__content">
-              <h2 class="caption__title"><strong>Creativity</strong> is intelligence having fun</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-button-prev slider-simple__prev"></div>
-      <div class="swiper-button-next slider-simple__next"></div>
-      <div class="swiper-pagination slider-simple__pagination"></div>
-  
-    </div>
+    {% include simpleslider.html %}
     
     <div class="page__title-bar">
       <h3>Pilihan Menu</h3>

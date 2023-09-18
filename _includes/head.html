@@ -6,8 +6,7 @@
   <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 {% endunless %}
 
-<!-- https://t.co/dKP3o1e -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
@@ -20,7 +19,7 @@
 
 <!-- Custom -->
 <link rel="stylesheet" href="{{ '/assets/vendor/swiper/swiper.min.css' | relative_url }}">
-<!-- <link rel="stylesheet" href="css/style.css"> -->
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="{{ '/assets/js/includeHTML.js' | relative_url }}"></script>
