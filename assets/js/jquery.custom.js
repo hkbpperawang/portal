@@ -7,7 +7,7 @@ $(document).ready(function () {
 	var pageid = $('.page').data("page");
 	
 	// LOAD PANEL LEFT
-	$( "#panel-left" ).load( "/pages/panel-left.html", function() {
+	$( "#panel-left" ).load( "{% include panel-left.html %}", function() {
 		var swipersubnav = new Swiper ('.panel__navigation', {
 			direction: 'horizontal',
 			effect: 'slide',
@@ -25,18 +25,18 @@ $(document).ready(function () {
 		});
 	});
 	
-	// LOAD PANEL RIGHT
-	// $( "#panel-right" ).load( "panel-right.html" );
+	LOAD PANEL RIGHT
+	$( "#panel-right" ).load( "panel-right.html" );
 	
 	//LOAD SOCIAL POPUP
-	$( "#popup-social" ).load( "/pages/popup-social.html" );
+	$( "#popup-social" ).load( "{% include popup-social.html %}" );
 	
 	//LOAD ALERT POPUP
-	$( "#popup-alert" ).load( "/pages/popup-alert.html" );
+	$( "#popup-alert" ).load( "{% include popup-alert.html %}" );
 	
 	
 	//LOAD BOTTOM NAVIGATION
-	$( "#bottom-toolbar" ).load( "bottom-navigation.html", function() {
+	$( "#bottom-toolbar" ).load( "{% include bottom-navigation.html %}", function() {
 		var swipernav = new Swiper ('.swiper-toolbar', {
 			direction: 'horizontal',
 			effect: 'slide',
