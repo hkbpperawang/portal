@@ -18,22 +18,100 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: HKBP Perawang
-name : "HKBP Perawang"
-email: informasi@hkbpperawang.org
-description: >- # this means to ignore newlines until "baseurl:"
-  Portal situs HKBP Perawang Ressort Perawang
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "portal.hkbpperawang.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  
+# Site Settings
+locale            : "en-US"
+title             : "Portal HKBP Perawang"
+title_separator   : "-"
+name              : "Portal HKBP Perawang"
+description       : "Portal situs HKBP Perawang Ressort Perawang"
+url               : "portal.hkbpperawang.org" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl           : "" # the subpath of your site, e.g. /blog
+teaser            : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo              : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 timezone: GMT
+
+# Site Author
+author:
+  name             : "HKBP Perawang"
+  avatar           : "/assets/images/avatar.png"
+  bio              : "I am an **amazing** person."
+  location         : "Perawang"
+  email            : "informasi@hkbpperawang.org"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
 
 # Build settings
 # theme: minima
 plugins:
   - jekyll-feed
+
+# Site Footer
+footer:
+  links:
+    - label: "Web"
+      icon: "fa fa-globe"
+      url:
+    - label: "Facebook"
+      icon: "fab fa-facebook-f"
+      url:
+    - label: "Youtube"
+      icon: "fab fa-youtube"
+      url:
+    - label: "Share"
+      icon: "fa fa-share-alt"
+      url:
+    - label: "Instagram"
+      icon: "fab fa-instagram"
+      url:
 
 # Conversion
 markdown: kramdown
@@ -52,6 +130,11 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: expanded # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style / minify using :compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -72,3 +155,17 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true

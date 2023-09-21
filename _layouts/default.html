@@ -1,102 +1,39 @@
-<!-- {{ content }} -->
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	{% include head.html %}
 </head>
-<body class="panel-closing">
-<!-- Overlay panel -->
-<div class="body-overlay"></div>
-<!-- Left panel -->
-<div id="panel-left">
-	{% include panel-left.html %}
-</div>
-<!-- Right panel -->
-<div id="panel-right">
-	{% include panel-right.html %}
-</div>
+<body class="theme-light" data-highlight="highlight-red" data-gradient="body-default">
 
-<div class="panel-close panel-close--left"><img src="/assets/images/icons/black/close.svg" alt="" title=""/></div>
-<div class="panel-close panel-close--right"><img src="/assets/images/icons/black/close.svg" alt="" title=""/></div>
+	<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+	<div id="page">
+    	<div class="header header-fixed header-logo-center mb-4" style="transform: translateX(0px);">
+            <a href="index.html" class="header-logo">Enabled<span class="color-highlight"> Mobile</span></a>
+            <a href="#" data-menu="menu-sidebar-left-3" class="header-icon header-icon-1 menu-sidebar-left-3"><i class="fas fa-bars"></i></a>
+            <a href="#" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
+        </div>
 
-<div class="page page--main" data-page="intro-website">
-	
-	<!-- HEADER -->
-	<header class="header header--page header--fixed">
-		{% include header.html %}
-	</header>
-	
-		<!-- PAGE CONTENT -->
-	<div class="page__content page__content--with-header">
-		<h2 class="page__title">Welcome to our mobile website</h2>	
-	        
-		<!-- SLIDER SIMPLE -->
-		<div class="swiper-container slider-simple slider-thumb-init mb-20 t0 swiper-container-initialized swiper-container-horizontal" data-paginationtype="bullets" data-spacebetweenitems="0" data-itemsperview="1">
-			{% include simple-slider.html %}
-		</div>
-		
-		<div class="page__title-bar">
-			<h3>Our main services</h3>
-		</div>
-              <div class="cards cards--12 mb-10">
-			  	{% include main-services.html %}
-              </div>
-			  
-		<div class="page__title-bar">
-			<h3>Featured Projects</h3>
-			<div class="page__title-right">
-				<div class="swiper-button-prev slider-thumbs__prev swiper-button-prev0 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-disabled="true"></div>
-				<div class="swiper-button-next slider-thumbs__next swiper-button-next0" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
-			</div>
-		</div>
-		
-		<!-- SLIDER THUMBS -->
-		<div class="swiper-container slider-thumbs slider-init mb-20 s0 swiper-container-initialized swiper-container-horizontal" data-paginationtype="bullets" data-spacebetweenitems="10" data-itemsperview="auto">
-			{% include slider-thumbs.html %}
-		</div>		  
-		
-		<div class="page__title-bar">
-			<h3 .button--green>Jadwal Ibadah</h3>
-		</div>
+		<!-- Footer Bar -->
+		<div id="footer-bar" class="footer-bar-1">
+	        <a href="#" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
+	        <a href="#"><i class="fa fa-star"></i><span>Features</span></a>
+	        <a href="#"><i class="fa fa-heart"></i><span>Pages</span></a>
+	        <a href="#"><i class="fa fa-search"></i><span>Search</span></a>
+	        <a href="#"><i class="fa fa-cog"></i><span>Settings</span></a>
+    	</div>
 
-              {% include jadwal-ibadah.html %}
-
-		<div class="page__title-bar">
-			<h3>Video Koor</h3>
-		</div>
-		<div class="fieldset">
-			<h2 id="Note"></h2>
-			<div class="videoplayer mb-20">
-				<!-- <iframe width="100%" height="250" src="http://www.youtube.com/embed/mdfMT5Zi8Eo" frameborder="0"></iframe> -->
-				<iframe class="youtube-video" src="https://www.youtube.com/embed/fqF_Ni5jF4U?si=KIWlS5JfDiYzuh0F" autoplay="1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
-			</div>
-		</div>
-<!-- 		<div class="fieldset">
-			<h2 id="Note"></h2>
-				{% include form.html %}
-		</div> -->
-	
+    	<div class="page-content header-clear-medium pb-0">
+    		{{ content }}
+    		{% include footer.html %}
+    	</div>
+    	{% include left-sidebar.html %}
 	</div>
-
-<!-- 	<footer>
-		{% include bottom-navigation.html %}
-	</footer> -->
-	<div class="card">
-		<p class="footer-copyright">Copyright &copy; Enabled <span id="copyright-year">2017</span>. All Rights Reserved.</p>
-	</div>
-</div>
-
-<!-- POPUP SOCIAL -->
-<div id="popup-social">
-	{% include popup-alert.html %}
-</div>
-
-<!-- POPUP ALERT -->
-<div id="popup-alert">
-	{% include popup-alert.html %}
-</div>
-
-<!-- SCRIPTS -->
-{% include scripts.html %}
+{% include actions.html %}
+{% include menu-share.html %}
+<script type="text/javascript" src="/assets/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/scripts/custom.js"></script>
 </body>
 </html>
