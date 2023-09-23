@@ -10,13 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     //Global Variables
     let isPWA = true;  // Enables or disables the service worker and PWA
     let isAJAX = true; // AJAX transitions. Requires local server or server
-    var pwaName = "Sticky"; //Local Storage Names for PWA
+    var pwaName = "HKBPPerawang"; //Local Storage Names for PWA
     var pwaRemind = 1; //Days to re-remind to add to home
     var pwaNoCache = false; //Requires server and HTTPS/SSL. Will clear cache with each visit
 
     //Setting Service Worker Locations scope = folder | location = service worker js location
     var pwaScope = "/";
-    var pwaLocation = "/assets/scripts/service-worker.js";
+    var pwaLocation = "./service-worker.js";
+    // navigator.serviceWorker.register('/assets/scripts/service-worker.js')
+    // const sourceFolderPath = "/assets/service-worker.js"
 
     //Place all your custom Javascript functions and plugin calls below this line
     function init_template(){
@@ -199,9 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
                document.getElementsByClassName('hide-map')[0].classList.add('disabled');
             })
         }
-
-
-
 
         //To Do List
         var toDoList = document.querySelectorAll('.todo-list a');
@@ -386,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loadHighlight.rel = "stylesheet";
             loadHighlight.className = "page-highlight";
             loadHighlight.type = "text/css";
-            loadHighlight.href = 'styles/highlights/highlight_' + defaultHighlight[1] +'.css';
+            loadHighlight.href = '/assets/styles/highlights/highlight_' + defaultHighlight[1] +'.css';
             if(!document.querySelectorAll('.page-highlight').length){
                 document.getElementsByTagName("head")[0].appendChild(loadHighlight);
                 document.body.setAttribute('data-highlight', 'highlight-'+defaultHighlight[1])
@@ -920,23 +919,80 @@ document.addEventListener('DOMContentLoaded', () => {
         )};
 
         //Sharing
-        var shareTitle = document.title;
-        var shareText = document.title;
-        var shareLink = window.location.href;
-        if(document.querySelectorAll('.shareToFacebook, .shareToTwitter, .shareToLinkedIn')[0]){
-            document.querySelectorAll('.shareToFacebook, .shareToTwitter, .shareToLinkedIn, .shareToWhatsApp, .shareToMail').forEach(x => {x.setAttribute('target','_blank');});
-            document.querySelectorAll('.shareToFacebook').forEach( x=> x.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u="+shareLink));
-            document.querySelectorAll('.shareToTwitter').forEach( x=> x.setAttribute("href", "http://twitter.com/share?text="+shareTitle+"%20"+shareLink));
-            document.querySelectorAll('.shareToPinterest').forEach( x=> x.setAttribute("href", "https://pinterest.com/pin/create/button/?url=" + shareLink));
-            document.querySelectorAll('.shareToWhatsApp').forEach( x=> x.setAttribute("href", "whatsapp://send?text=" + shareLink));
-            document.querySelectorAll('.shareToMail').forEach( x=> x.setAttribute("href", "mailto:?body=" + shareLink));
-            document.querySelectorAll('.shareToLinkedIn').forEach( x=> x.setAttribute("href", "https://www.linkedin.com/shareArticle?mini=true&url="+shareLink+"&title="+shareTitle+"&summary=&source="));
-        }
-        //Menu Share Web API
-        if (navigator.canShare){
-            const shareData = {title: shareTitle, text: shareText, url: shareLink}
-            var shareMenu = document.querySelectorAll('[data-menu="menu-share"], [data-show-share]');
-            if(shareMenu){shareMenu.forEach(el => {el.addEventListener('click', async () => {menu('menu-share', 'hide',0); try {await navigator.share(shareData)} catch(err){}});});}
+        // var shareTitle = document.title;
+        // var shareText = document.title;
+        // var shareLink = window.location.href;
+        // if(document.querySelectorAll('.shareToFacebook, .shareToTwitter, .shareToLinkedIn')[0]){
+        //     document.querySelectorAll('.shareToFacebook, .shareToTwitter, .shareToLinkedIn, .shareToWhatsApp, .shareToMail').forEach(x => {x.setAttribute('target','_blank');});
+        //     document.querySelectorAll('.shareToFacebook').forEach( x=> x.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u="+shareLink));
+        //     document.querySelectorAll('.shareToTwitter').forEach( x=> x.setAttribute("href", "http://twitter.com/share?text="+shareTitle+"%20"+shareLink));
+        //     document.querySelectorAll('.shareToPinterest').forEach( x=> x.setAttribute("href", "https://pinterest.com/pin/create/button/?url=" + shareLink));
+        //     document.querySelectorAll('.shareToWhatsApp').forEach( x=> x.setAttribute("href", "whatsapp://send?text=" + shareLink));
+        //     document.querySelectorAll('.shareToMail').forEach( x=> x.setAttribute("href", "mailto:?body=" + shareLink));
+        //     document.querySelectorAll('.shareToLinkedIn').forEach( x=> x.setAttribute("href", "https://www.linkedin.com/shareArticle?mini=true&url="+shareLink+"&title="+shareTitle+"&summary=&source="));
+        // }
+        // //Menu Share Web API
+        // if (navigator.canShare){
+        //     const shareData = {title: shareTitle, text: shareText, url: shareLink}
+        //     var shareMenu = document.querySelectorAll('[data-menu="menu-share"], [data-show-share]');
+        //     if(shareMenu){shareMenu.forEach(el => {el.addEventListener('click', async () => {menu('menu-share', 'hide',0); try {await navigator.share(shareData)} catch(err){}});});}
+        // }
+
+        // Sharing2
+        ;function _0x3f00xfc() {
+            var _0x3f00xfd = document["title"];
+            var _0x3f00xfe = document["title"];
+            var _0x3f00xff = window["location"]["href"];
+            if (document["querySelectorAll"]('.shareToFacebook, .shareToTwitter, .shareToLinkedIn')[0]) {
+                document["querySelectorAll"]('.shareToFacebook, .shareToTwitter, .shareToLinkedIn, .shareToWhatsApp, .shareToMail')["forEach"]((_0x3f00x100)=>{
+                    _0x3f00x100["setAttribute"]('target', '_blank')
+                }
+                );
+                document["querySelectorAll"]('.shareToFacebook')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "https://www.facebook.com/sharer/sharer.php?u=" + _0x3f00xff)
+                }
+                );
+                document["querySelectorAll"]('.shareToTwitter')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "http://twitter.com/share?text=" + _0x3f00xfd + "%20" + _0x3f00xff)
+                }
+                );
+                document["querySelectorAll"]('.shareToPinterest')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "https://pinterest.com/pin/create/button/?url=" + _0x3f00xff)
+                }
+                );
+                document["querySelectorAll"]('.shareToWhatsApp')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "whatsapp://send?text=" + _0x3f00xff)
+                }
+                );
+                document["querySelectorAll"]('.shareToMail')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "mailto:?body=" + _0x3f00xff)
+                }
+                );
+                document["querySelectorAll"]('.shareToLinkedIn')["forEach"]((_0x3f00x100)=>{
+                    return _0x3f00x100["setAttribute"]("href", "https://www.linkedin.com/shareArticle?mini=true&url=" + _0x3f00xff + "&title=" + _0x3f00xfd + "&summary=&source=")
+                }
+                )
+            }
+            ;if (navigator["canShare"]) {
+                const _0x3f00x101 = {
+                    title: _0x3f00xfd,
+                    text: _0x3f00xfe,
+                    url: _0x3f00xff
+                };
+                var _0x3f00x102 = document["querySelectorAll"]('[data-menu=\"menu-share\"], [data-show-share]');
+                if (_0x3f00x102) {
+                    _0x3f00x102["forEach"]((_0x3f00xb)=>{
+                        _0x3f00xb["addEventListener"]('click', async()=>{
+                            _0x3f00x3a('menu-share', 'hide', 0);
+                            try {
+                                await navigator["share"](_0x3f00x101)
+                            } catch (err) {}
+                        }
+                        )
+                    }
+                    )
+                }
+            }
         }
 
         //Contact Form

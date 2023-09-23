@@ -1,7 +1,7 @@
 // To clear cache on devices, always increase APP_VER number after making changes.
 // The app will serve fresh content right away or after 2-3 refreshes (open / close)
-var APP_NAME = 'StickyMobile';
-var APP_VER = '4.8.1';
+var APP_NAME = 'HKBPPerawang';
+var APP_VER = '4.8.4';
 var CACHE_NAME = APP_NAME + '-' + APP_VER;
 
 // Files required to make this app work offline.
@@ -9,33 +9,40 @@ var CACHE_NAME = APP_NAME + '-' + APP_VER;
 // Leave REQUIRED_FILES = [] to disable offline.
 var REQUIRED_FILES = [
 	// HTML Files
-	'index.html',
+	'{{ site.link }}',
 	// Styles
-	'styles/style.css',
-	'styles/bootstrap.css',
+	'/assets/styles/style.css',
+	'/assets/styles/bootstrap.css',
 	// Scripts
-	'scripts/custom.js',
-	'scripts/bootstrap.min.js',
+	'/assets/scripts/custom.js',
+	'/assets/scripts/bootstrap.min.js',
 	// Plugins
-	'plugins/before-after/before-after.css',
-	'plugins/before-after/before-after.js',
-	'plugins/charts/charts.js',
-	'plugins/charts/charts-call-graphs.js',
-	'plugins/countdown/countdown.js',
-	'plugins/filterizr/filterizr.js',
-	'plugins/filterizr/filterizr.css',
-	'plugins/filterizr/filterizr-call.js',
-	'plugins/galleryViews/gallery-views.js',
-	'plugins/glightbox/glightbox.js',
-	'plugins/glightbox/glightbox.css',
-	'plugins/glightbox/glightbox-call.js',
+	'/assets/plugins/before-after/before-after.css',
+	'/assets/plugins/before-after/before-after.js',
+	'/assets/plugins/charts/charts.js',
+	'/assets/plugins/charts/charts-call-graphs.js',
+	'/assets/plugins/countdown/countdown.js',
+	'/assets/plugins/filterizr/filterizr.js',
+	'/assets/plugins/filterizr/filterizr.css',
+	'/assets/plugins/filterizr/filterizr-call.js',
+	'/assets/plugins/galleryViews/gallery-views.js',
+	'/assets/plugins/glightbox/glightbox.js',
+	'/assets/plugins/glightbox/glightbox.css',
+	'/assets/plugins/glightbox/glightbox-call.js',
 	// Fonts
-	'fonts/css/fontawesome-all.min.css',
-	'fonts/webfonts/fa-brands-400.woff2',
-	'fonts/webfonts/fa-regular-400.woff2',
-	'fonts/webfonts/fa-solid-900.woff2',
+	'/assets/fonts/css/fontawesome-all.min.css',
+	'/assets/fonts/webfonts/fa-brands-400.woff2',
+	'/assets/fonts/webfonts/fa-regular-400.woff2',
+	'/assets/fonts/webfonts/fa-solid-900.woff2',
+	'/assets/fonts/webfonts/fa-duotone-900.woff2',
+	'/assets/fonts/webfonts/fa-light-300.woff2',
+	'/assets/fonts/webfonts/fa-sharp-light-300.woff2',
+	'/assets/fonts/webfonts/fa-sharp-regular-400.woff2',
+	'/assets/fonts/webfonts/fa-sharp-solid-900.woff2',
+	'/assets/fonts/webfonts/fa-thin-100.woff2',
+	'/assets/fonts/webfonts/fa-v4compatibility.woff2',
 	// Images
-	'images/empty.png',
+	'/assets/images/empty.png',
 ];
 
 // Service Worker Diagnostic. Set true to get console logs.

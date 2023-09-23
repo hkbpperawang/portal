@@ -657,7 +657,7 @@ body {
 }
 .menu-title p {
   font-size: 11px;
-  margin: -15px 0px 10px 20px;
+  margin: 15px 0 -25px 15px!important;
   padding: 0px 0px 0px 0px;
 }
 .menu-title a {
@@ -669,6 +669,10 @@ body {
   line-height: 85px;
   right: 0px;
   top: 0px;
+}
+
+.menu-title {
+  position: relative;
 }
 
 .menu-bg {
@@ -791,7 +795,7 @@ body {
 }
 
 .menu-box-bottom.menu-active {
-  transform: translate3d(0%, 0, 0) !important;
+  transform: translate3d(0%,20px,0)!important;
 }
 
 .menu-box-modal.menu-active {

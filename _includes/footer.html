@@ -1,6 +1,6 @@
 			<div class="footer card bg-dark">
-            	<a href="#" class="footer-title"><span class="color-highlight">{{ site.name | default: site.title }}</span></a>
-            	<p class="footer-text"><span>Made with<i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>by Tim Digital</span><br><br>Portal situs mobile untuk mengakses informasi dengan mudah</p>
+            	<a href="#" class="footer-title mb-3"><span class="color-highlight">{{ site.name | default: site.title }}</span></a>
+            	<p class="footer-text"><span>Made with<i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>by Tim Digital</span><br>{{ site.description }}</p>
             	<div class="text-center mb-3">
             		<a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-dark-light"><i class="fa fa-globe"></i></a>
 	                <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
@@ -9,6 +9,6 @@
                 	<a href="#" class="back-to-top icon icon-xs rounded-sm shadow-l bg-dark-light"><i class="fa fa-angle-up"></i></a>
             	</div>
             	<p class="footer-copyright">&copy; <span id="copyright-year">{{ site.time | date: '%Y' }}</span> {{ site.name | default: site.title }}. All Rights Reserved.</p>
-            	<p class="footer-links"><a href="#" class="color-highlight">Kebijakan Privasi</a> | <a href="#" class="color-highlight">Aturan Pengguna</a> | <a href="https://status.hkbpperawang.org" class="back-to-top color-highlight"> Status</a></p>
+            	<p class="footer-links"><a href="#" class="color-highlight">Kebijakan Privasi</a> | <a href="#" class="color-highlight">Aturan Pengguna</a> | <a href="{{ site.status.links }}" class="color-highlight"> Status</a></p>
             	<div class="clear"></div>
         	</div>

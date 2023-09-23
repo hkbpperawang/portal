@@ -89,7 +89,7 @@
 	<link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/fontawesome-all.min.css">    
-	<link rel="manifest" href="" data-pwa-version="set_in_manifest_and_pwa_js">
+	<link rel="manifest" href="/assets/manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
@@ -105,7 +105,7 @@
     	<div class="header header-fixed header-logo-center mb-4" style="transform: translateX(0px);">
             <a href="index.html" class="header-logo">Enabled<span class="color-highlight"> Mobile</span></a>
             <a href="#" data-menu="menu-sidebar-left-3" class="header-icon header-icon-1 menu-sidebar-left-3"><i class="fas fa-bars"></i></a>
-            <a href="#" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
+            <a href="#" data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
             <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
         </div>
 
@@ -118,7 +118,7 @@
 	        <a href="#"><i class="fa fa-cog"></i><span>Settings</span></a>
     	</div>
 
-    	<div class="page-content header-clear-medium pb-0">
+    	<div class="page-content header-clear-medium">
     		<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
 
 <p>You can find the source code for Minima at GitHub:
@@ -132,8 +132,8 @@
 
 
     					<div class="footer card bg-dark">
-            	<a href="#" class="footer-title"><span class="color-highlight">Portal HKBP Perawang</span></a>
-            	<p class="footer-text"><span>Made with<i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>by Tim Digital</span><br><br>Portal situs mobile untuk mengakses informasi dengan mudah</p>
+            	<a href="#" class="footer-title mb-3"><span class="color-highlight">Portal HKBP Perawang</span></a>
+            	<p class="footer-text"><span>Made with<i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>by Tim Digital</span><br>Portal situs HKBP Perawang Ressort Perawang</p>
             	<div class="text-center mb-3">
             		<a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-dark-light"><i class="fa fa-globe"></i></a>
 	                <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
@@ -142,7 +142,7 @@
                 	<a href="#" class="back-to-top icon icon-xs rounded-sm shadow-l bg-dark-light"><i class="fa fa-angle-up"></i></a>
             	</div>
             	<p class="footer-copyright">&copy; <span id="copyright-year">2023</span> Portal HKBP Perawang. All Rights Reserved.</p>
-            	<p class="footer-links"><a href="#" class="color-highlight">Kebijakan Privasi</a> | <a href="#" class="color-highlight">Aturan Pengguna</a> | <a href="https://status.hkbpperawang.org" class="back-to-top color-highlight"> Status</a></p>
+            	<p class="footer-links"><a href="#" class="color-highlight">Kebijakan Privasi</a> | <a href="#" class="color-highlight">Aturan Pengguna</a> | <a href="https://status.hkbpperawang.org" class="color-highlight"> Status</a></p>
             	<div class="clear"></div>
         	</div>
     	</div>
@@ -180,7 +180,7 @@
 							<span>Page Packs</span>
 							<i class="fa fa-angle-right"></i>
 						</a>
-						<a href="#">
+						<a href="/team.html">
 							<i class="fa font-12 fa-users gradient-yellow rounded-sm color-white"></i>
 							<span>Tim Digital</span>
 							<i class="fa fa-angle-right"></i>
@@ -216,7 +216,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+
 			<div class="card card-style mb-3">
 				<div class="content my-0">
 					<h5 class="font-700 text-uppercase opacity-40 font-12 pt-2 mb-0">Settings</h5>
@@ -243,6 +243,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 	</div>
     <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
@@ -326,7 +327,7 @@
             <a href="#" data-menu="menu-settings" class="mb-3 btn btn-full btn-m rounded-sm bg-highlight shadow-xl text-uppercase font-900 mt-4">Back to Settings</a>
         </div>
     </div>
-<div id="menu-share" class="menu menu-box-bottom menu-box-detached">
+<!-- <div id="menu-share" class="menu menu-box-bottom menu-box-detached">
         <div class="menu-title mt-n1"><h1>Share the Love</h1><p class="color-highlight">Just Tap the Social Icon. We'll add the Link</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
         <div class="content mb-0">
             <div class="divider mb-0"></div>
@@ -358,7 +359,44 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370" style="display: block; height: 370px;">        <div class="menu-title">
+            <p class="color-highlight">Tap a link to</p>
+            <h1>Share</h1>
+            <a href="#" class="close-menu"><i class="fa fa-times-circle"></i></a>
+        </div>
+        <div class="divider divider-margins mt-3 mb-0"></div>
+        <div class="content mt-0">
+            <div class="list-group list-custom-small list-icon-0">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToFacebook" target="_blank">
+                    <i class="fab fa-facebook-f font-12 bg-facebook color-white shadow-l rounded-s"></i>
+                    <span>Facebook</span>
+                    <i class="fa fa-angle-right pr-1"></i>
+                </a>
+                <a href="http://twitter.com/share?text=AppKit BootStrap%20https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToTwitter" target="_blank">
+                    <i class="fab fa-twitter font-12 bg-twitter color-white shadow-l rounded-s"></i>
+                    <span>Twitter</span>
+                    <i class="fa fa-angle-right pr-1"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.enableds.com/products/appkit/v25/index.html&amp;title=AppKit BootStrap&amp;summary=&amp;source=" class="external-link shareToLinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in font-12 bg-linkedin color-white shadow-l rounded-s"></i>
+                    <span>LinkedIn</span>
+                    <i class="fa fa-angle-right pr-1"></i>
+                </a>
+                <a href="whatsapp://send?text=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToWhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp font-12 bg-whatsapp color-white shadow-l rounded-s"></i>
+                    <span>WhatsApp</span>
+                    <i class="fa fa-angle-right pr-1"></i>
+                </a>
+                <a href="mailto:?body=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToMail border-0" target="_blank">
+                    <i class="fa fa-envelope font-12 bg-mail color-white shadow-l rounded-s"></i>
+                    <span>Email</span>
+                    <i class="fa fa-angle-right pr-1"></i>
+                </a>
+            </div>
+        </div>
+</div>
 <script type="text/javascript" src="/assets/scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/scripts/custom.js"></script>
 </body>
