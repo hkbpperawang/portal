@@ -93,7 +93,10 @@
 	<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/fontawesome-all.min.css">    
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/duotone.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/light.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/css/thin.min.css">
 	<link rel="manifest" href="/assets/manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -108,7 +111,7 @@
 	<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
 	<div id="page">
     	<div class="header header-fixed header-logo-center mb-4" style="transform: translateX(0px);">
-            <a href="index.html" class="header-logo">Enabled<span class="color-highlight"> Mobile</span></a>
+            <a href="http://localhost:4000" class="header-logo">Portal<span class="color-highlight"> HKBP Perawang</span></a>
             <a href="#" data-menu="menu-sidebar-left-3" class="header-icon header-icon-1 menu-sidebar-left-3"><i class="fas fa-bars"></i></a>
             <a href="#" data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
             <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
@@ -124,7 +127,16 @@
     	</div>
 
     	<div class="page-content header-clear-medium">
-    		<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    		<!--  -->
+    		<h1>Welcome to Jekyll!</h1>
+
+<p>
+  19 Sep 2023
+  
+  
+</p>
+
+<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
@@ -143,12 +155,11 @@
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
-
     					<div class="footer card bg-dark">
             	<a href="#" class="footer-title mb-3"><span class="color-highlight">Portal HKBP Perawang</span></a>
             	<p class="footer-text"><span>Made with<i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i>by Tim Digital</span><br>Portal situs HKBP Perawang Ressort Perawang</p>
             	<div class="text-center mb-3">
-            		<a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-dark-light"><i class="fa fa-globe"></i></a>
+            		<a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-dark-light"><i class="fa-regular fa-globe-pointer"></i></a>
 	                <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
 	                <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-youtube"><i class="fab fa-youtube"></i></a>
 	                <a href="#" data-menu="menu-share" class="icon icon-xs rounded-sm me-1 shadow-l bg-red-dark"><i class="fa fa-share-alt"></i></a>
@@ -193,7 +204,7 @@
 							<span>Page Packs</span>
 							<i class="fa fa-angle-right"></i>
 						</a>
-						<a href="/team.html">
+						<a href="/team/">
 							<i class="fa font-12 fa-users gradient-yellow rounded-sm color-white"></i>
 							<span>Tim Digital</span>
 							<i class="fa fa-angle-right"></i>
@@ -374,7 +385,8 @@
         </div>
     </div> -->
 
-    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370" style="display: block; height: 370px;">        <div class="menu-title">
+    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370" style="display: block; height: 370px;">
+                <div class="menu-title">
             <p class="color-highlight">Tap a link to</p>
             <h1>Share</h1>
             <a href="#" class="close-menu"><i class="fa fa-times-circle"></i></a>
@@ -382,27 +394,27 @@
         <div class="divider divider-margins mt-3 mb-0"></div>
         <div class="content mt-0">
             <div class="list-group list-custom-small list-icon-0">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToFacebook" target="_blank">
+                <a href="auto_generated" class="external-link shareToFacebook">
                     <i class="fab fa-facebook-f font-12 bg-facebook color-white shadow-l rounded-s"></i>
                     <span>Facebook</span>
                     <i class="fa fa-angle-right pr-1"></i>
                 </a>
-                <a href="http://twitter.com/share?text=AppKit BootStrap%20https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToTwitter" target="_blank">
+                <a href="auto_generated" class="external-link shareToTwitter">
                     <i class="fab fa-twitter font-12 bg-twitter color-white shadow-l rounded-s"></i>
                     <span>Twitter</span>
                     <i class="fa fa-angle-right pr-1"></i>
                 </a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.enableds.com/products/appkit/v25/index.html&amp;title=AppKit BootStrap&amp;summary=&amp;source=" class="external-link shareToLinkedIn" target="_blank">
+                <a href="auto_generated" class="external-link shareToLinkedIn">
                     <i class="fab fa-linkedin-in font-12 bg-linkedin color-white shadow-l rounded-s"></i>
                     <span>LinkedIn</span>
                     <i class="fa fa-angle-right pr-1"></i>
                 </a>
-                <a href="whatsapp://send?text=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToWhatsApp" target="_blank">
+                <a href="auto_generated" class="external-link shareToWhatsApp">
                     <i class="fab fa-whatsapp font-12 bg-whatsapp color-white shadow-l rounded-s"></i>
                     <span>WhatsApp</span>
                     <i class="fa fa-angle-right pr-1"></i>
                 </a>
-                <a href="mailto:?body=https://www.enableds.com/products/appkit/v25/index.html" class="external-link shareToMail border-0" target="_blank">
+                <a href="auto_generated" class="external-link shareToMail border-0">
                     <i class="fa fa-envelope font-12 bg-mail color-white shadow-l rounded-s"></i>
                     <span>Email</span>
                     <i class="fa fa-angle-right pr-1"></i>

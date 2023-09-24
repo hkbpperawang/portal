@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     var pwaNoCache = false; //Requires server and HTTPS/SSL. Will clear cache with each visit
 
     //Setting Service Worker Locations scope = folder | location = service worker js location
-    var pwaScope = "/";
-    var pwaLocation = "./service-worker.js";
+    // var pwaScope = "/";
+    // var pwaLocation = "{{ site.url }}/service-worker.js";
+    // var pwaLocation = "{{ './service-worker.js' | relative_url }}";
     // navigator.serviceWorker.register('/assets/scripts/service-worker.js')
     // const sourceFolderPath = "/assets/service-worker.js"
 
@@ -1292,7 +1293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!checkPWA.classList.contains('isPWA')){
                 if ('serviceWorker' in navigator) {
                   window.addEventListener('load', function() {
-                    navigator.serviceWorker.register(pwaLocation, {scope: pwaScope}).then(function(registration){registration.update();})
+                    navigator.serviceWorker.register("/service-worker.js").then(function(registration){registration.update();})
                   });
                 }
 

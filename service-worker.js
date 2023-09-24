@@ -36,9 +36,9 @@ var REQUIRED_FILES = [
 	'/assets/fonts/webfonts/fa-solid-900.woff2',
 	'/assets/fonts/webfonts/fa-duotone-900.woff2'
 	'/assets/fonts/webfonts/fa-light-300.woff2'
-	'/assets/fonts/webfonts/fa-sharp-light-300.woff2'
-	'/assets/fonts/webfonts/fa-sharp-regular-400.woff2'
-	'/assets/fonts/webfonts/fa-sharp-solid-900.woff2'
+	// '/assets/fonts/webfonts/fa-sharp-light-300.woff2'
+	// '/assets/fonts/webfonts/fa-sharp-regular-400.woff2'
+	// '/assets/fonts/webfonts/fa-sharp-solid-900.woff2'
 	'/assets/fonts/webfonts/fa-thin-100.woff2'
 	'/assets/fonts/webfonts/fa-v4compatibility.woff2'
 	// Images
